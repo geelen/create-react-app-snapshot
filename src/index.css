@@ -3,3 +3,22 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+nav > * + * {
+  margin-left: 1rem;
+}
+
+section {
+  width: 40rem;
+  max-width: calc(100vw - 2rem);
+  margin: 0 auto;
+}
+
+section > * + * {
+  margin-top: 1rem;
+}
