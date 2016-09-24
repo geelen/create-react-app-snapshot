@@ -5,9 +5,10 @@
   "devDependencies": {
     "pushstate-server": "^1.14.0",
     "react-router": "^2.7.0",
+    "react-scripts": "0.4.1",
     "react-snapshot": "^1.0.2",
-    "surge": "^0.18.0",
-    "react-scripts": "0.4.1"
+    "styled-components": "0.0.6",
+    "surge": "^0.18.0"
   },
   "dependencies": {
     "react": "^15.3.1",

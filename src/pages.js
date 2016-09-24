@@ -1,15 +1,35 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router'
+import styled, { css } from 'styled-components'
+
+const Section = styled.section`
+  ${(props, context) => 
+    context.margin = "margin-top: 2rem;"
+  }
+`
+
+const A = styled.div`
+  ${(props, context) => context.margin}
+  color: ${props => props.color || 'black'};
+  ${({hasBorder}) => hasBorder && 'border: 1px solid blue;'}
+  font-weight: bold;
+  &:hover {
+    text-transform: uppercase;
+  }
+`
 
 export const Index = () => (
-  <section>
+  <Section>
+    <A color="red">Omfg</A>
+    <A color="orange">Look</A>
+    <A hasBorder>At this shit</A>
     <h1>This is the index page!</h1>
     <p>If you have JS enabled, the links below should work instantaneously. If not, or if you JS is taking a long time to load, your site still works and is valid. Yay!</p>
     <nav>
       <Link to="/login">Login here</Link>
       <Link to="/about">About this site!</Link>
     </nav>
-  </section>
+  </Section>
 )
 
 export const Admin = () => (
